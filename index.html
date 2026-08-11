@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AERO ULTRA — Next-Generation Spatial Product</title>
+  <meta name="description" content="Experience cinematic spatial engineering. Interactive scroll-driven storytelling landing page featuring 180-frame smooth sequence animation, 3D hotspots, and interactive audio studio.">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <span class="logo-accent">AERO</span> ULTRA
+      </div>
+      <div class="preloader-bar-bg">
+        <div id="preloader-bar"></div>
+      </div>
+      <div class="preloader-status">
+        <span id="preloader-text">Loading 3D Experience...</span>
+        <span id="preloader-percent">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Header Navigation -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-mark"></span>
+        <span class="logo-text">AERO <span class="badge">ULTRA</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">Overview</a>
+        <a href="#engineering" class="nav-link">Engineering</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#studio" class="nav-link">Audio Studio</a>
+        <a href="#specs" class="nav-link">Specs</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#preorder" class="btn btn-primary btn-magnetic">
+          <span>Pre-Order</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-drawer">
+    <nav class="mobile-nav-links">
+      <a href="#hero" class="mobile-nav-link">Overview</a>
+      <a href="#engineering" class="mobile-nav-link">Engineering</a>
+      <a href="#features" class="mobile-nav-link">Features</a>
+      <a href="#studio" class="mobile-nav-link">Audio Studio</a>
+      <a href="#specs" class="mobile-nav-link">Specs</a>
+      <a href="#gallery" class="mobile-nav-link">Gallery</a>
+      <a href="#preorder" class="btn btn-primary btn-full mt-4">Pre-Order Now</a>
+    </nav>
+  </div>
+
+  <!-- Scroll Progress Indicator Line -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Main Scroll Storytelling Container -->
+  <main id="hero">
+    <section id="scroll-sequence-section">
+      <!-- Sticky Canvas Viewport -->
+      <div class="canvas-sticky-wrapper">
+        <canvas id="hero-canvas"></canvas>
+        <div class="canvas-ambient-glow"></div>
+
+        <!-- 3D Interactive Hotspots (Triggered during exploded sequence ~30%-70%) -->
+        <div id="hotspot-driver" class="canvas-hotspot" style="top: 50%; left: 32%;">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-card">
+            <div class="hotspot-title">50mm Beryllium Driver</div>
+            <div class="hotspot-desc">Custom diaphragm delivering 5Hz-48kHz ultraclear acoustic reproduction.</div>
+          </div>
+        </div>
+
+        <div id="hotspot-chip" class="canvas-hotspot" style="top: 42%; left: 68%;">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-card">
+            <div class="hotspot-title">Neural N1 Spatial Engine</div>
+            <div class="hotspot-desc">8.4 TFLOPS dedicated audio processing for sub-millisecond 3D head tracking.</div>
+          </div>
+        </div>
+
+        <div id="hotspot-mic" class="canvas-hotspot" style="top: 62%; left: 52%;">
+          <div class="hotspot-dot"></div>
+          <div class="hotspot-card">
+            <div class="hotspot-title">Beamforming MEMS Mic</div>
+            <div class="hotspot-desc">Triple ANC array sampling ambient noise 48,000 times per second.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Storytelling Overlays (Driven by Scroll Percentage) -->
+      <div class="story-overlays">
+
+        <!-- Stage 1: Hero Intro (0% - 18%) -->
+        <div class="story-step step-hero" data-start="0" data-end="18">
+          <div class="step-content glass-panel text-center">
+            <span class="hero-tag">GENESIS OF MOTION</span>
+            <h1 class="hero-title">Engineering Beyond <br><span class="gradient-text">Perception.</span></h1>
+            <p class="hero-subtitle">Crafted with aero-grade acoustics, neural spatial audio, and zero-gravity comfort.</p>
+            <div class="hero-scroll-hint">
+              <span class="scroll-mouse">
+                <span class="scroll-wheel"></span>
+              </span>
+              <span class="scroll-text">Scroll to explore sequence</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 2: Precision Architecture (20% - 38%) -->
+        <div id="engineering" class="story-step step-left" data-start="20" data-end="38">
+          <div class="step-card glass-panel">
+            <span class="card-num">01 / ARCHITECTURE</span>
+            <h2>Precision Formed Titanium.</h2>
+            <p>Every curve is sculpted using vacuum-forged titanium alloy, delivering structural rigidity at a fraction of standard weight.</p>
+            <div class="spec-inline-group">
+              <div class="spec-inline">
+                <span class="spec-val">0.02mm</span>
+                <span class="spec-lbl">Machining Tolerance</span>
+              </div>
+              <div class="spec-inline">
+                <span class="spec-val">240g</span>
+                <span class="spec-lbl">Ultralight Mass</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 3: Exploded Internal Engineering (40% - 60%) -->
+        <div class="story-step step-right" data-start="40" data-end="60">
+          <div class="step-card glass-panel">
+            <span class="card-num">02 / ACOUSTICS</span>
+            <h2>Beryllium Core Drivers.</h2>
+            <p>Custom 50mm diaphragms generate distortion-free audio response across an expansive 5Hz to 48,000Hz frequency curve.</p>
+            <ul class="feature-bullets">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Dual neodymium magnetic flux motors</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Oxygen-free copper voice coils</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Active acoustic dampening chambers</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stage 4: Neural Spatial Chip (62% - 80%) -->
+        <div class="story-step step-center" data-start="62" data-end="80">
+          <div class="step-card glass-panel text-center max-w-lg">
+            <span class="card-num">03 / INTELLIGENCE</span>
+            <h2>Neural Spatial Matrix.</h2>
+            <p>Powered by the N1 Neural Engine executing 8.4 trillion operations per second to dynamically re-map 3D audio space in real-time based on head tracking.</p>
+            <div class="chip-matrix-stats">
+              <div class="stat-pill">
+                <span class="stat-num">8.4 TFLOPS</span>
+                <span class="stat-label">Neural Engine</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-num">1ms</span>
+                <span class="stat-label">Zero-Latency Sync</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 5: Master Synthesis & Finale (82% - 100%) -->
+        <div class="story-step step-hero-end" data-start="82" data-end="100">
+          <div class="step-content glass-panel text-center">
+            <span class="hero-tag">THE FINAL EVOLUTION</span>
+            <h2 class="hero-title">Experience Sound Without Limits.</h2>
+            <p class="hero-subtitle">Available in three bespoke metallic finishes with up to 60 hours of uncompromised battery life.</p>
+            <div class="cta-button-row">
+              <a href="#preorder" class="btn btn-primary btn-large btn-magnetic">
+                <span>Reserve Yours</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#specs" class="btn btn-secondary btn-large">Explore Specifications</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Features Section -->
+    <section id="features" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">UNRIVALED INNOVATION</span>
+          <h2 class="section-title">Designed for Perfectionists.</h2>
+          <p class="section-desc">Every element engineered to redefine how you interact with pure studio sound.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card glass-panel reveal-on-scroll">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>60-Hour Playtime</h3>
+            <p>Fast-charge technology gives you 8 hours of playback from just a 10-minute USB-C charge.</p>
+          </div>
+
+          <div class="feature-card glass-panel reveal-on-scroll" data-delay="100">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><path d="M12 3v18M3 12h18M5.3 5.3l13.4 13.4M5.3 18.7L18.7 5.3"/></svg>
+            </div>
+            <h3>Adaptive ANC 4.0</h3>
+            <p>Triple microphone array samples ambient sound 48,000 times per second to isolate noise instantaneously.</p>
+          </div>
+
+          <div class="feature-card glass-panel reveal-on-scroll" data-delay="200">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Lossless Spatial Audio</h3>
+            <p>Support for 24-bit/96kHz high-resolution audio over Bluetooth 5.4 UltraWideband link.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Audio Studio & Spectrum Analyzer Section -->
+    <section id="studio" class="section-padding dark-bg">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">LIVE ACOUSTIC DEMO</span>
+          <h2 class="section-title">Interactive Audio Studio.</h2>
+          <p class="section-desc">Experience real-time frequency curve tuning and acoustic spatial processing.</p>
+        </div>
+
+        <div class="audio-studio-card glass-panel reveal-on-scroll">
+          <div class="sound-mode-selector">
+            <button class="mode-btn active" data-mode="spatial">Spatial 3D Audio</button>
+            <button class="mode-btn" data-mode="reference">Studio Reference</button>
+            <button class="mode-btn" data-mode="bass">Acoustic Bass Boost</button>
+          </div>
+
+          <div class="eq-canvas-wrapper">
+            <canvas id="eq-canvas"></canvas>
+          </div>
+
+          <div class="cta-button-row">
+            <button id="toggle-audio-btn" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <span>Play Acoustic Demo</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Filterable Specs Grid -->
+    <section id="specs" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">TECHNICAL SPECIFICATIONS</span>
+          <h2 class="section-title">The Master List.</h2>
+        </div>
+
+        <div class="specs-wrapper glass-panel reveal-on-scroll">
+          <div class="spec-category-tabs">
+            <button class="spec-tab active" data-cat="all">All Specs</button>
+            <button class="spec-tab" data-cat="acoustics">Acoustics</button>
+            <button class="spec-tab" data-cat="connectivity">Connectivity</button>
+            <button class="spec-tab" data-cat="battery">Battery</button>
+          </div>
+
+          <div class="specs-grid">
+            <div class="spec-box" data-cat="acoustics">
+              <span class="spec-label">Audio Drivers</span>
+              <span class="spec-value">50mm Beryllium Compound</span>
+            </div>
+            <div class="spec-box" data-cat="acoustics">
+              <span class="spec-label">Frequency Response</span>
+              <span class="spec-value">5 Hz — 48,000 Hz</span>
+            </div>
+            <div class="spec-box" data-cat="connectivity">
+              <span class="spec-label">Connectivity</span>
+              <span class="spec-value">Bluetooth 5.4 / USB-C Audio</span>
+            </div>
+            <div class="spec-box" data-cat="battery">
+              <span class="spec-label">Battery Capacity</span>
+              <span class="spec-value">1200 mAh (60 Hours)</span>
+            </div>
+            <div class="spec-box" data-cat="acoustics">
+              <span class="spec-label">Microphones</span>
+              <span class="spec-value">6x Beamforming MEMS Array</span>
+            </div>
+            <div class="spec-box" data-cat="connectivity">
+              <span class="spec-label">Latency</span>
+              <span class="spec-value">&lt; 1ms Ultra-Low Sync</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bespoke Color Customizer -->
+    <section id="gallery" class="section-padding dark-bg">
+      <div class="container text-center reveal-on-scroll">
+        <span class="section-tag">PERSONAL EXPRESSION</span>
+        <h2 class="section-title">Bespoke Finishes.</h2>
+        <p class="section-desc">Choose from three anodized surface treatments.</p>
+
+        <div class="finish-selector">
+          <button class="finish-btn active" data-color="obsidian" data-hex="#0b0b0e">
+            <span class="swatch obsidian"></span>
+            <span>Obsidian Dark</span>
+          </button>
+          <button class="finish-btn" data-color="silver" data-hex="#38bdf8">
+            <span class="swatch silver"></span>
+            <span>Space Cyan</span>
+          </button>
+          <button class="finish-btn" data-color="violet" data-hex="#c084fc">
+            <span class="swatch violet"></span>
+            <span>Cosmic Purple</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Order Conversion CTA -->
+    <section id="preorder" class="section-padding text-center">
+      <div class="container reveal-on-scroll">
+        <div class="cta-box glass-panel glow-card">
+          <span class="hero-tag">LIMITED LAUNCH EDITION</span>
+          <h2 class="cta-title">Ready to Experience AERO ULTRA?</h2>
+          <p class="cta-desc">Includes custom aluminum hard shell case, braided audiophile cable, and 2-year express warranty.</p>
+          <div class="price-tag">$499 <span class="price-strike">$599</span></div>
+          <a href="#" class="btn btn-primary btn-large btn-magnetic">
+            <span>Pre-Order AERO ULTRA</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <div class="guarantee-row">
+            <span>✓ Free Global Shipping</span>
+            <span>✓ 30-Day Risk-Free Trial</span>
+            <span>✓ 2-Year Warranty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">AERO <span class="logo-accent">ULTRA</span></div>
+        <p>© 2026 AERO Inc. All rights reserved. Designed for pure sound perfection.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
